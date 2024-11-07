@@ -9,12 +9,6 @@ type UserHandler struct {
 	userUseCase services.UserUseCase
 }
 
-type Response struct {
-	ID      uint   `copier:"must"`
-	Name    string `copier:"must"`
-	Surname string `copier:"must"`
-}
-
 func NewUserHandler(usecase services.UserUseCase) interfaces.UserHandler {
 	return &UserHandler{
 		userUseCase: usecase,
